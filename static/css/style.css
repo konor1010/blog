@@ -1,0 +1,76 @@
+
+
+
+/* Стили для Футера */
+
+.footer {
+	padding: 1.125rem 0;
+	text-align: center;
+    display: block;
+    background: rgb(33, 37, 41);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: lightgrey;
+}
+
+
+.footer nav {
+	display: inline-block;
+	float: left;
+    display: block;
+}
+
+.footer ul:not(.links-vertical) {
+	line-height: 100%;
+}
+
+.footer ul {
+	margin-bottom: 0;
+	padding: 0;
+	list-style: none;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    word-spacing: 20px;
+}
+
+.footer ul li {
+    display: inline-block;
+
+}
+
+.footer ul li a{
+    display: inline-block;
+    color: lightgrey;
+    text-decoration: none;
+
+}
+
+.footer a{
+
+    color: rgb(40, 167, 69);
+    text-decoration: none;
+}
+
+
+/* Прижимаем footer к низу страницы */
+html {
+  /* Растягиваем документ на всю высоту окна */
+  height: 100%;
+}
+
+body {
+  position: relative;
+  /* Растягиваем body по высоте html */
+  min-height: 100%;
+    /* Выставляем отступ с высотой footer */
+    padding-bottom: 50px;
+}
+
+footer {
+  /* Позиционируем footer внизу main */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Высота footer */
+  height: 50px;
+}

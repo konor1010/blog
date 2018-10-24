@@ -5,6 +5,7 @@ from django_summernote.admin import SummernoteModelAdmin
 # Register your models here.
 
 class NewsAdmin(SummernoteModelAdmin):
+    list_display = ('title', 'category','user', 'created',)
     summernote_fields = ('text_min', 'text')
 
 

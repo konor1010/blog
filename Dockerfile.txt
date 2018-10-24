@@ -1,0 +1,11 @@
+FROM ubuntu:latest
+
+RUN apt-get update -y
+RUN apt-get install -y python-pip python-dev build-essential
+COPY . /blog
+WORKDIR /blog
+RUN pip install -r requirements.txt
+ENTRYPOINT ['python']
+RUN python blog/manage.py migrate
+
+CMD python mysite/manae.py runserver 0.0.0.0:5000

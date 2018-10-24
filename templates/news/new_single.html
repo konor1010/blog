@@ -21,16 +21,18 @@
     {% for comment in comments %}
         Пользователь - {{ comment.user }} <br>
         {{comment.text}} <br>
-        Добавленно - {{ comment.created }}
+        Добавленно - {{ comment.created }} <br><br>
+    {% endfor %}
 
+    {% if user.is_active %}
         <form action="" method="post">
-        {% csrf_token %}
-
-        {{ form.as_p }}
-        <button type="submit"> Отправить </button>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit"> Отправить </button>
         </form>
 
-    {% endfor %}
-    
+    {% else %}
+        <h4>"Чтобы оставить комментарий зарегистрируйтесь на нашем сайте"</h4>
+    {% endif %}
 
 {% endblock content %}
